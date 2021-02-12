@@ -4,6 +4,8 @@ public class NotasAlunos {
     private String nome;
     private float nota1;
     private float nota2;
+    boolean resultado;
+
 
     //Construtor
 
@@ -15,8 +17,20 @@ public class NotasAlunos {
 
     //Metodo
 
-    public void media(float media){
-        media = (nota1 + nota2)/2;
+    public float calcularMedia(){
+
+        float media = (nota1 + nota2)/2;
+        System.out.println("O(A) aluno(a) " + nome + " ficou com media " + media );
+        if (media>=7){
+            System.out.println("O(A) aluno(a) " + nome + " foi aprovado" );
+        }
+        else{
+            System.out.println("O(A) aluno(a) " + nome + " foi reprovado(a)" );
+        }
+
+        return media;
+
+
     }
 
 }

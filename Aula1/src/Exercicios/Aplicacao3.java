@@ -3,9 +3,14 @@ package Exercicios;
 public class Aplicacao3 {
 
     public static void main(String[] args) {
-        NotasAlunos = new NotasAlunos("Fernando", 8,9 );
+        NotasAlunos Fernando = new NotasAlunos("Fernando", 8, 9);
+        NotasAlunos Silvana = new NotasAlunos("Silvana", 7, 6);
 
-        System.out.println(NotasAlunos.media());
+        Fernando.calcularMedia();
+        Silvana.calcularMedia();
+
+
+
 
     }
 }
