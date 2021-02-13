@@ -3,8 +3,9 @@ package Exercicios;
 public class Calculadora {
 
     public float somar (float valor1, float valor2){
-        float soma = valor1 + valor2;
-        return soma;
+        //float soma = valor1 + valor2;
+        float soma;
+        return soma = valor1 + valor2;
     }
 
     public float subtrair (float valor1, float valor2){

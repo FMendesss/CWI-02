@@ -14,3 +14,5 @@ public class Comparador {
 
     }
 }
+
+//return valor1 < valor2;
