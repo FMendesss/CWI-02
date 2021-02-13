@@ -8,6 +8,8 @@ public class Aplicacao {
 
         Filme vento = new Filme("E o vento levou", "Classico de época", 238, 1939,4, victor);
         Filme psicose = new Filme("Psicose", "Terror clássico", 125, 1960,4, alfred);
+        Filme clube = new Filme("Clube da Luta", "Terror clássico", 125, 1960,4, alfred);
+        Filme batman = new Filme("Batman vs Superman", "Terror clássico", 125, 1960,4, alfred);
 
         Ator rami = new Ator("Rami Malek",31,1,Genero.MASCULINO);
 
@@ -16,6 +18,8 @@ public class Aplicacao {
 
         vento.reproduzir();
         psicose.reproduzir();
+        clube.reproduzir();
+        batman.reproduzir();
         rami.imprimir();
         victor.imprimir();
     }
