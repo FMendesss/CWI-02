@@ -11,7 +11,15 @@ public class Imovel {
 
     public String apresentacao(){
 
-        return String ("Imovel localizado no endereço " + endereco + "." + "Valor: " + valor);
+        return "Imovel localizado no endereço " + endereco + "." + "Valor: " + valor;
 
         }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
 }

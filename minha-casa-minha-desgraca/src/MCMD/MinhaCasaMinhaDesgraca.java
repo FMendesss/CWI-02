@@ -1,5 +1,6 @@
 package MCMD;
 
+import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Random;
@@ -65,7 +66,7 @@ public class MinhaCasaMinhaDesgraca {
         System.out.println("\nCerto! Encontrei "+ opcoesViaveis.size() + " opções aqui. Dá uma olhada:");
         int index = 0;
         for (Imovel imovel : opcoesViaveis) {
-            System.out.printf(" [%d] %s\n", ++index, Imovel.apresentacao()); //corrigido letra maiuscula
+            System.out.printf(" [%d] %s\n", ++index, imovel.apresentacao()); //corrigido letra maiuscula
             Thread.sleep(250);
         }
 
@@ -99,5 +100,8 @@ public class MinhaCasaMinhaDesgraca {
 
         PropostaFinanciamento financiamento = new PropostaFinanciamento(beneficiario, imovelEscolhido, mesesParaPagamento);
         financiamento.validarProposta();
+
     }
+
+
 }

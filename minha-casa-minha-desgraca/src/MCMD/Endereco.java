@@ -6,7 +6,9 @@ public class Endereco {
     private String complemento;
     private String bairro;
     private String cidade;
-    private UnidadeFederativa uf;
+    private UnidadeFederativa estado;
 
-
+    public UnidadeFederativa getEstado() {
+        return estado;
+    }
 }

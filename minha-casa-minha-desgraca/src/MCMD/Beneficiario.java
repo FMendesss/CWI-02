@@ -10,5 +10,11 @@ public class Beneficiario {
         this.salario = salario;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
+    public Double getSalario() {
+        return salario;
+    }
 }
