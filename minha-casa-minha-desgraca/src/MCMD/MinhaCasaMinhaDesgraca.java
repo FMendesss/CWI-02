@@ -22,6 +22,8 @@ public class MinhaCasaMinhaDesgraca {
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
+      
+
 
 
         /**
@@ -66,7 +68,7 @@ public class MinhaCasaMinhaDesgraca {
         System.out.println("\nCerto! Encontrei "+ opcoesViaveis.size() + " opções aqui. Dá uma olhada:");
         int index = 0;
         for (Imovel imovel : opcoesViaveis) {
-            System.out.printf(" [%d] %s\n", ++index, imovel.apresentacao()); //corrigido letra maiuscula
+            System.out.printf(" [%d] %s\n", ++index, imovel.apresentacao());
             Thread.sleep(250);
         }
 
