@@ -1,5 +1,7 @@
 package MCMD;
 
+import java.util.Arrays;
+
 public class PropostaFinanciamento {
     private Beneficiario beneficiario;
     private Imovel imovel;
@@ -58,7 +60,7 @@ public class PropostaFinanciamento {
         }
 
         private void imprimirPropostaAprovada(){
-        System.out.println("Meus pêsames " + this.nome.getNome() ".");
+        System.out.println("Meus pêsames " + this.nome.getNome());
         System.out.println("Seu financiamento para o imovel localizado no endereço");
         System.out.println(this.endereco.getEndereco());
         System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
@@ -67,8 +69,9 @@ public class PropostaFinanciamento {
         }
 
         private void imprimirPropostaNegada(){
-            System.out.println("Prezado(a) " + this.nome.getNome() ".");
-            System.out.println("Seu financiamento para o imovel localizado no endereço");
+            for (String s : Arrays.asList("Prezado(a) " + this.nome.getNome(), "Seu financiamento para o imovel localizado no endereço")) {
+                System.out.println(s);
+            }
             System.out.println(this.endereco.getEndereco());
             System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
             System.out.println("não foi aceito porque o sistema acredita que você não conseguirá pagar.");

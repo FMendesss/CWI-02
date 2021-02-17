@@ -22,7 +22,20 @@ public class MinhaCasaMinhaDesgraca {
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
-      
+      Endereco sp = new Endereco("Rua da Quitanda", 15, "Casa", "Centro","São Paulo", UnidadeFederativa.SP);
+      Endereco rj = new Endereco("Rua Joaquim Murtinho",20,"Apto 103","Lapa","Rio de Janeiro", UnidadeFederativa.RJ);
+      Endereco rs = new Endereco("Av. Unisinos",100,"sala 08","Cristo Rei","São Leopoldo",UnidadeFederativa.RS);
+
+     // Imovel a = new Imovel(sp,100000);
+    //  Imovel b = new Imovel(rj,150000);
+     // Imovel c = new Imovel(rs,200000);
+
+      Beneficiario joao = new Beneficiario("João Silva",3000d);
+      Beneficiario jose = new Beneficiario("José Santos",4000d);
+      Beneficiario josias = new Beneficiario("Josias Pereira",5000d);
+
+
+
 
 
 

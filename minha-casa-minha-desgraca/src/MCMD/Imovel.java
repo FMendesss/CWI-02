@@ -4,7 +4,7 @@ public class Imovel {
     private Endereco endereco;
     private Double valor;
 
-    public Imovel(String endereco, Double valor) {
+    public Imovel(Endereco endereco, Double valor) {
         this.endereco = endereco;
         this.valor = valor;
     }
