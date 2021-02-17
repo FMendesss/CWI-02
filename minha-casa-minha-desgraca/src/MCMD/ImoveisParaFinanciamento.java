@@ -23,7 +23,7 @@ public class ImoveisParaFinanciamento {
      *      " > Atenção, problema de registro! Imóveis com valor R$ XXX não são aceitos no programa."
      */
     public void registrarImovel(Imovel imovel) {
-        if (this.valor.getValor() <= 50000 || this.valor.getValor() >= 1000000){
+        if (valor.getValor() <= 50000 || valor.getValor() >= 1000000){
             System.out.println("Atenção, problema de registro! Imóveis com valor R$ " + this.valor.getValor() + "não são aceitos no programa.");
         }
 

@@ -26,13 +26,19 @@ public class MinhaCasaMinhaDesgraca {
       Endereco rj = new Endereco("Rua Joaquim Murtinho",20,"Apto 103","Lapa","Rio de Janeiro", UnidadeFederativa.RJ);
       Endereco rs = new Endereco("Av. Unisinos",100,"sala 08","Cristo Rei","São Leopoldo",UnidadeFederativa.RS);
 
-     // Imovel a = new Imovel(sp,100000);
-    //  Imovel b = new Imovel(rj,150000);
-     // Imovel c = new Imovel(rs,200000);
+      Imovel a = new Imovel(sp,100000d);
+      Imovel b = new Imovel(rj,150000d);
+      Imovel c = new Imovel(rs,200000d);
 
       Beneficiario joao = new Beneficiario("João Silva",3000d);
       Beneficiario jose = new Beneficiario("José Santos",4000d);
       Beneficiario josias = new Beneficiario("Josias Pereira",5000d);
+
+      opcoesParaFinanciamento.registrarImovel(a);
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@ public class PropostaFinanciamento {
     private Beneficiario beneficiario;
     private Imovel imovel;
     private int mesesParaPagamento;
-    private Endereco estado;
+    private UnidadeFederativa estado;
     private Beneficiario nome;
     private Imovel endereco;
 
@@ -29,7 +29,7 @@ public class PropostaFinanciamento {
         Double valorImovel = imovel.getValor();
         Double validador = this.beneficiario.getSalario() * mesesParaPagamento;
 
-        if(this.estado.getEstado() = "SP") {
+        if(estado == UnidadeFederativa.SP) {
             if (validador >= (valorImovel * 0.65)) {
                 imprimirPropostaAprovada();
             }
@@ -38,9 +38,10 @@ public class PropostaFinanciamento {
             }
         }
 
-        else if(this.estado.getEstado() = "RJ") {
+        else if(estado == UnidadeFederativa.RJ) {
             if (validador >= (valorImovel * 0.6)) {
                 imprimirPropostaAprovada();
+
             }
             else {
                 imprimirPropostaNegada();

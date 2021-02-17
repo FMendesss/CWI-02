@@ -1,6 +1,6 @@
 package MCMD;
 
-public class Imovel {
+public class Imovel{
     private Endereco endereco;
     private Double valor;
 
@@ -8,6 +8,10 @@ public class Imovel {
         this.endereco = endereco;
         this.valor = valor;
     }
+
+
+
+
 
     public String apresentacao(){
 
