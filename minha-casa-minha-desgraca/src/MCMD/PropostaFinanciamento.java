@@ -69,13 +69,11 @@ public class PropostaFinanciamento {
         }
 
         private void imprimirPropostaNegada(){
-            for (String s : Arrays.asList("Prezado(a) " + this.beneficiario.getNome(), "Seu financiamento para o imovel localizado no endereço")) {
-                System.out.println(s);
-            }
-            System.out.println(this.imovel.getEndereco());
-            System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
-            System.out.println("não foi aceito porque o sistema acredita que você não conseguirá pagar.");
-            System.out.println("Favor ler os requisitos antes de fazer eu perder meu tempo analisando.");
+        System.out.println("Prezado " + this.beneficiario.getNome() + " seu financiamento para o imovel localizado no endereço");
+        System.out.println(this.imovel.getEndereco());
+        System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
+        System.out.println("não foi aceito porque o sistema acredita que você não conseguirá pagar.");
+        System.out.println("Favor ler os requisitos antes de fazer eu perder meu tempo analisando.");
         }
 
     }
