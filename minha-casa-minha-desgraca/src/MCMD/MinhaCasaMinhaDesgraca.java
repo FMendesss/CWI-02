@@ -30,11 +30,15 @@ public class MinhaCasaMinhaDesgraca {
       Imovel b = new Imovel(rj,150000d);
       Imovel c = new Imovel(rs,200000d);
 
-      Beneficiario joao = new Beneficiario("João Silva",3000d);
-      Beneficiario jose = new Beneficiario("José Santos",4000d);
-      Beneficiario josias = new Beneficiario("Josias Pereira",5000d);
+
+      //Beneficiario joao = new Beneficiario("João Silva",3000d);
+      //Beneficiario jose = new Beneficiario("José Santos",4000d);
+      //Beneficiario josias = new Beneficiario("Josias Pereira",5000d);
 
       opcoesParaFinanciamento.registrarImovel(a);
+      opcoesParaFinanciamento.registrarImovel(b);
+      opcoesParaFinanciamento.registrarImovel(c);
+
 
 
 

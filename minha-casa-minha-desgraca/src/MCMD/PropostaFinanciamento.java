@@ -7,8 +7,7 @@ public class PropostaFinanciamento {
     private Imovel imovel;
     private int mesesParaPagamento;
     private UnidadeFederativa estado;
-    private Beneficiario nome;
-    private Imovel endereco;
+
 
     public PropostaFinanciamento(Beneficiario beneficiario, Imovel imovel, int mesesParaPagamento) {
         this.beneficiario = beneficiario;
@@ -61,19 +60,19 @@ public class PropostaFinanciamento {
         }
 
         private void imprimirPropostaAprovada(){
-        System.out.println("Meus pêsames " + this.nome.getNome());
+        System.out.println("Meus pêsames " + this.beneficiario.getNome());
         System.out.println("Seu financiamento para o imovel localizado no endereço");
-        System.out.println(this.endereco.getEndereco());
+        System.out.println(this.imovel.getEndereco());
         System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
         System.out.println("foi aprovado");
 
         }
 
         private void imprimirPropostaNegada(){
-            for (String s : Arrays.asList("Prezado(a) " + this.nome.getNome(), "Seu financiamento para o imovel localizado no endereço")) {
+            for (String s : Arrays.asList("Prezado(a) " + this.beneficiario.getNome(), "Seu financiamento para o imovel localizado no endereço")) {
                 System.out.println(s);
             }
-            System.out.println(this.endereco.getEndereco());
+            System.out.println(this.imovel.getEndereco());
             System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
             System.out.println("não foi aceito porque o sistema acredita que você não conseguirá pagar.");
             System.out.println("Favor ler os requisitos antes de fazer eu perder meu tempo analisando.");
