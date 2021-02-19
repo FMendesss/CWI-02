@@ -28,6 +28,10 @@ public class PropostaFinanciamento {
         Double valorImovel = imovel.getValor();
         Double validador = this.beneficiario.getSalario() * mesesParaPagamento;
 
+        //FIXME colocar da seguinte forma if(UnidadeFederativa.SP.equals(imovel.getEndereco().getEstado()))
+        //FIXME usar if apenas para definir o multiplicador para reduzir linhas
+        //FIXME poderia usar o multiplicador como atributo do estado na classe UnidadeFederativa
+
         if(estado == UnidadeFederativa.SP) {
             if (validador >= (valorImovel * 0.65)) {
                 imprimirPropostaAprovada();
@@ -71,6 +75,7 @@ public class PropostaFinanciamento {
         private void imprimirPropostaNegada(){
         System.out.println("Prezado " + this.beneficiario.getNome() + " seu financiamento para o imovel localizado no endereço");
         System.out.println(this.imovel.getEndereco());
+        //FIXME colocar a função de apresentação aqui
         System.out.println("com o prazo de pagamento de " + mesesParaPagamento);
         System.out.println("não foi aceito porque o sistema acredita que você não conseguirá pagar.");
         System.out.println("Favor ler os requisitos antes de fazer eu perder meu tempo analisando.");

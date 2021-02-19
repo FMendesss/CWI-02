@@ -14,9 +14,8 @@ public class Imovel{
 
 
     public String apresentacao(){
-
-        return "Imovel localizado no endereço " + endereco + "." + "Valor: " + valor;
-
+        return "Imovel localizado no endereço " + endereco.getLogradouro() + "n" + endereco.getNumero()"." + "Valor: " + valor;
+        //FIXME colocar demais atributos no endereço
         }
 
     public Endereco getEndereco() {

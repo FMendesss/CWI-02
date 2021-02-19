@@ -17,7 +17,35 @@ public class Endereco {
         this.estado = estado;
     }
 
+
+
     public UnidadeFederativa getEstado() {
         return estado;
     }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+
+
+    //FIXME colocar a parte do @override e tostring
+
+    //usar tostring quando se tem um padrão de texto a ser apresentado
 }

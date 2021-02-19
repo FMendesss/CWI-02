@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ImoveisParaFinanciamento {
 
+    //FIXME colocar variaveis minimo e maximo
+
     private Imovel valor;
 
     private List<Imovel> imoveis;
