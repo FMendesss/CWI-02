@@ -11,7 +11,7 @@ public class Ator extends Pessoa {
 
     @Override
     public void imprimir () {
-        System.out.println("Ator: " + getNome() + " Quantidade de Oscars: " + oscar);
+        System.out.println("Ator: " + getNome() + "." + " Quantidade de Oscars: " + oscar);
     }
 
 

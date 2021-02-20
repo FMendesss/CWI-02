@@ -12,7 +12,7 @@ public class Diretor extends Pessoa{
 
     @Override
     public void imprimir () {
-        System.out.println("Diretor: " + getNome() + " Quantidade de Filmes Dirigidos: " + quantidadeFilmes);
+        System.out.println("Diretor: " + getNome() + "." + " Quantidade de Filmes Dirigidos: " + quantidadeFilmes);
     }
 
 

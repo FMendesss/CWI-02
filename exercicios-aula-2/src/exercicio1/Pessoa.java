@@ -1,9 +1,14 @@
 package exercicio1;
 
+import java.util.Date;
+
 public class Pessoa {
     private String nome;
     private int idade;
     private Genero genero;
+    private Date dataNascimento, hoje;
+
+
 
     public Pessoa(String nome, int idade, Genero genero) {
         this.nome = nome;
