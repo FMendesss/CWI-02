@@ -10,10 +10,14 @@ public class TestesDatas {
     public static void main(String[] args) {
 
 
-       LocalDate nascimento = LocalDate.of(1986-07-07);
-       LocalDate idade = Period.between(LocalDate.now(), nascimento).getYears();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate data = LocalDate.parse("07/07/1986", formato);
 
-            System.out.println(idade);
+        Integer teste = Period.between(data, LocalDate.now()).getYears();
+
+        System.out.println(teste);
+
+
         }
 
 
