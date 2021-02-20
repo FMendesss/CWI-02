@@ -1,5 +1,8 @@
 package exercicio1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Filme {
 
     private String nome;
@@ -7,28 +10,27 @@ public class Filme {
     private int duracao;
     private int ano;
     private int avaliacao;
-    private Diretor diretor;
+    private List<Pessoa> elenco;
 
     //a variavel 'diretor' é do tipo 'Diretor'
 
-    public Filme(String nome, String descricao, int duracao, int ano, int avaliacao, Diretor diretor) {
+    public Filme(String nome, String descricao, int duracao, int ano, int avaliacao, List<Pessoa> elenco) {
         defineAvaliacaoConformeRange(avaliacao);
         defineAvaliacaoComBaseNoNome(nome);
         this.nome = nome;
         this.descricao = descricao;
         this.duracao = duracao;
         this.ano = ano;
-        this.diretor = diretor;
+        this.elenco = elenco;
 
         //o this permite usar o mesmo nome do atributo e variavel
-        //quando não usar o mesmo nome não precisa o this, porem boa pratica é usar igual
+        //quando não usar o mesmo nome não precisa o this, porem boa pratica é usar
     }
 
     public void reproduzir(){
         System.out.println("Nome do Filme: " + this.nome);
         System.out.println("Descrição: " + this.descricao);
         System.out.println("Duração: " + this.duracao);
-        System.out.println("Diretor: " + this.diretor.getNome());
         System.out.println("Avaliação: " + this.avaliacao);
         System.out.println("");
 
@@ -60,10 +62,22 @@ public class Filme {
         }
 
     }
+    public void adicionarAtor(Ator ator){
+        this.elenco.add(ator);
+    }
 
+    public void adicionarDiretor(Diretor diretor){
+        if (this.elenco == null){
+            this.elenco = new ArrayList<>();
+        }
+        this.elenco.add(diretor);
+    }
 
-
-
+    public void exibirCreditos(){
+        for (Pessoa pessoa : elenco){
+            pessoa.imprimir();
+        }
+    }
 
 
 }
