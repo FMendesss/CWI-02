@@ -7,15 +7,16 @@ public class Editora {
     private String localizacao;
 
     public Editora(final String nome, final String localizacao) {
-        validarNome(nome);
+
         this.nome = nome;
         this.localizacao = localizacao;
+        validarNome(nome);
         }
 
     public void validarNome(nome) {
 
-        if (nome.equals("DC Comics")) {
-            throw new EditoraException("O nome não pode ser DC Comics") ;
+        if (nome.equals("DC Comics")){
+            throw new EditoraException("O nome não pode ser DC Comics");
         }
 
     }
