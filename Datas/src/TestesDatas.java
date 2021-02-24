@@ -17,8 +17,15 @@ public class TestesDatas {
 
         System.out.println(teste);
 
+        Double a = 2d;
+        Double b = 3d;
+        Double c = b % a;
+
+        System.out.println(c);
 
         }
+
+
 
 
 }

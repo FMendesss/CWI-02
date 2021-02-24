@@ -1,13 +1,10 @@
-package domain;
 
-import domain.Data;
-import domain.conta.ContaBancaria;
+package br.com.banco.desgraca.domain;
 
 import java.time.LocalDate;
-import java.util.List;
-
 
 public class Transacao {
+
     private TipoTransacao tipo;
     private LocalDate data;
     private Double valor;
@@ -19,4 +16,5 @@ public class Transacao {
         this.valor = valor;
 
     }
+
 }

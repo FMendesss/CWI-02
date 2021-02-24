@@ -1,12 +1,13 @@
-package domain.conta;
+package br.com.banco.desgraca.domain.conta;
 
-import domain.conta.ContaBancaria;
+import br.com.banco.desgraca.domain.InstituicaoBancaria;
+import br.com.banco.desgraca.domain.TipoTransacao;
+import br.com.banco.desgraca.domain.Transacao;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContaCorrente implements ContaBancaria {
-
     private Integer numero;
     private InstituicaoBancaria instituicao;
     private Double saldo;
@@ -53,4 +54,5 @@ public class ContaCorrente implements ContaBancaria {
             //FIXME exception divisivel por 5
         }
     }
+
 }

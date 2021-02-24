@@ -1,4 +1,4 @@
-package domain;
+package br.com.banco.desgraca;
 
 import java.time.LocalDate;
 

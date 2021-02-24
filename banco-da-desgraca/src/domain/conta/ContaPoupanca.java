@@ -1,11 +1,11 @@
 package domain.conta;
 
-import br.com.banco.desgraca.domain.InstituicaoBancaria;
+import domain.InstituicaoBancaria;
 
-public class ContaPoupanca implements br.com.banco.desgraca.domain.conta.ContaBancaria {
+public class ContaPoupanca implements domain.conta.ContaBancaria {
 
     private Integer numero;
-    private br.com.banco.desgraca.domain.InstituicaoBancaria instituicao;
+    private domain.InstituicaoBancaria instituicao;
 
     public ContaPoupanca(Integer numero, InstituicaoBancaria instituicao) {
         this.numero = numero;

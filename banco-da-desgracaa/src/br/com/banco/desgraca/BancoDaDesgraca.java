@@ -1,6 +1,8 @@
-package domain;
+package br.com.banco.desgraca;
 
-import domain.InstituicaoBancaria;
+import br.com.banco.desgraca.domain.InstituicaoBancaria;
+import br.com.banco.desgraca.domain.conta.ContaBancaria;
+import br.com.banco.desgraca.domain.conta.ContaCorrente;
 
 public class BancoDaDesgraca {
 
