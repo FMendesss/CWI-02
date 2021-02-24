@@ -11,4 +11,12 @@ public class ContaPoupanca implements br.com.banco.desgraca.domain.conta.ContaBa
         this.numero = numero;
         this.instituicao = instituicao;
     }
+
+    @Override
+    public String toString() {
+        return "ContaCorrente{" +
+                "numero=" + numero +
+                ", instituicao=" + instituicao +
+                '}';
+    }
 }

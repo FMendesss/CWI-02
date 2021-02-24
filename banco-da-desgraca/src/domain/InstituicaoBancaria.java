@@ -6,6 +6,6 @@ public enum InstituicaoBancaria {
     BRADESCO,
     CAIXA,
     ITAU,
-    NUBANK
+    NUBANK;
 
 }

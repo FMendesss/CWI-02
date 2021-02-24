@@ -11,4 +11,14 @@ public class ContaDigital implements br.com.banco.desgraca.domain.conta.ContaBan
         this.numero = numero;
         this.instituicao = instituicao;
     }
+
+    @Override
+    public String toString() {
+        return "ContaCorrente{" +
+                "numero=" + numero +
+                ", instituicao=" + instituicao +
+                '}';
+    }
+
+
 }
