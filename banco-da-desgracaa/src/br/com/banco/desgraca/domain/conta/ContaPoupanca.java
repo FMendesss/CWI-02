@@ -5,7 +5,6 @@ import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.TipoTransacao;
 import br.com.banco.desgraca.domain.Transacao;
 import br.com.banco.desgraca.exception.SaldoInsuficienteException;
-import br.com.banco.desgraca.exception.SaqueCCException;
 import br.com.banco.desgraca.exception.SaqueCPException;
 
 import java.time.LocalDate;

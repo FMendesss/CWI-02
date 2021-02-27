@@ -4,5 +4,4 @@ public class SaqueCPException extends RuntimeException{
 
     public SaqueCDException(String mensagemDeErro) {
         super(mensagemDeErro);
-    }
 }
