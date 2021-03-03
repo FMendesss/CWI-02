@@ -1,9 +1,7 @@
 package br.com.cwi.resetflix.mapper;
 
-import br.com.cwi.resetflix.entity.AtorEntity;
 import br.com.cwi.resetflix.entity.DiretorEntity;
 import br.com.cwi.resetflix.entity.FilmeEntity;
-import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesDiretorResponse;
 import br.com.cwi.resetflix.response.FilmeResponse;
 

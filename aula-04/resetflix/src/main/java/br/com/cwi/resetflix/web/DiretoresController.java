@@ -1,12 +1,8 @@
 package br.com.cwi.resetflix.web;
 
-import br.com.cwi.resetflix.request.CriarAtorRequest;
 import br.com.cwi.resetflix.request.CriarDiretorRequest;
-import br.com.cwi.resetflix.response.AtoresResponse;
-import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesDiretorResponse;
 import br.com.cwi.resetflix.response.DiretoresResponse;
-import br.com.cwi.resetflix.service.AtoresService;
 import br.com.cwi.resetflix.service.DiretoresService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
