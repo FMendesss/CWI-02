@@ -27,4 +27,9 @@ public class FilmeRepository {
         //TODO Filtrar na repository por id de ator
         return filmes;
     }
+
+    public List<FilmeEntity> acharFilmesDiretor(final Long id) {
+        //TODO Filtrar na repository por id de ator
+        return filmes;
+    }
 }
