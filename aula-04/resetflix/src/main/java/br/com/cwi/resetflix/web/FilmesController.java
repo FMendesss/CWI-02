@@ -3,6 +3,7 @@ package br.com.cwi.resetflix.web;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.cwi.resetflix.response.AtoresResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,8 +26,10 @@ public class FilmesController implements FilmesContract {
     @Override
     @GetMapping
     public List<FilmeResponse> getFilmes(@RequestParam(value = "genero", required = false) final Genero genero) {
-        //TODO realizar chamada
-        return Collections.emptyList();
+        public List<FilmeResponse> getNome() {
+            return filmesService.getNome();
+        }
+     //   return Collections.emptyList();
     }
 
     @Override
