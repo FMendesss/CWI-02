@@ -5,6 +5,9 @@ import static org.apache.logging.log4j.util.Strings.isEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.cwi.resetflix.entity.AtorEntity;
+import br.com.cwi.resetflix.repository.DiretoresRepository;
+import br.com.cwi.resetflix.repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +24,11 @@ import br.com.cwi.resetflix.response.DiretoresResponse;
 @Service
 public class DiretoresService {
 
-//    @Autowired
-//    private DiretoresRepository diretoresRepository;
-//
-//    @Autowired
-//    private FilmeRepository filmeRepository;
+    @Autowired
+    private DiretoresRepository diretoresRepository;
+
+    @Autowired
+    private FilmeRepository filmeRepository;
 
     @Autowired
     private DiretoresResponseMapper diretoresResponseMapper;
@@ -38,7 +41,7 @@ public class DiretoresService {
 
     public List<DiretoresResponse> getDiretores() {
 //        final List<DiretorEntity> diretores = diretoresRepository.metodoBuscarTodos();
-        final List<DiretorEntity> diretores = new ArrayList<>();
+        final List<DiretorEntity> diretores = diretoresRepository.findAll();
         return diretoresResponseMapper.mapear(diretores);
     }
 
@@ -50,14 +53,19 @@ public class DiretoresService {
 
         final DiretorEntity diretorSalvar = diretorEntityMapper.mapear(request);
 
+        diretoresRepository.save(diretorSalvar);
 //        return diretoresRepository.metodoSalvar(diretorSalvar).getId();
         return null;
     }
 
     public ConsultarDetalhesDiretorResponse consultarDetalhesDiretor(final Long id) {
 
+        final DiretorEntity diretorSalvo = diretoresRepository.findById(id).orElse(null);
+
         //final DiretorEntity diretorSalvo = diretoresRepository.metodoBuscarPorId(id);
-        final DiretorEntity diretorSalvo = null;
+        //TODO Por que essa linha abaixo estava aí?
+        //final DiretorEntity diretorSalvo = null;
+
         if (diretorSalvo == null) {
             throw new NotFoundException("Diretor não encontrado");
         }

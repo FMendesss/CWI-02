@@ -6,6 +6,8 @@ import static org.apache.logging.log4j.util.Strings.isEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.cwi.resetflix.entity.AtorEntity;
+import br.com.cwi.resetflix.repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,15 +43,12 @@ public class FilmesService {
     @Autowired
     private ConsultarDetalhesFilmeResponseMapper consultarDetalhesFilmeResponseMapper;
 
-    public List<FilmeResponse> getFilmes(final Genero genero) {
+    @Autowired
+    private FilmeRepository filmeRepository;
 
-        final List<FilmeEntity> filmes = new ArrayList<>();
+        public List<FilmeResponse> getFilmes(final Genero genero) {
 
-        if (nonNull(genero)) {
-//            filmes = filmeRepository.metodoBuscarTodosPorGenero(genero);
-        } else {
-//            filmes = filmeRepository.metodoBuscarTodos();
-        }
+        final List<FilmeEntity> filmes = filmeRepository.findAllByGenero(genero);
 
         return filmeResponseMapper.mapear(filmes);
     }
@@ -61,13 +60,18 @@ public class FilmesService {
         }
 
         final FilmeEntity filmeSalvar = filmeEntityMapper.mapear(request);
+
+        filmeRepository.save(filmeSalvar);
+
 //        return filmeRepository.metodoSalvar(filmeSalvar).getId();
         return null;
     }
 
     public ConsultarDetalhesFilmeResponse consultarDetalhesFilme(final Long id) {
+
+        final FilmeEntity filmeSalvo = filmeRepository.findById(id).orElse(null);
 //        final FilmeEntity filmeSalvo = filmeRepository.metodoBuscarPorId(id).orElse(null);
-        FilmeEntity filmeSalvo = null;
+        //FilmeEntity filmeSalvo = null;
         if (filmeSalvo == null) {
             throw new NotFoundException("Filme não encontrado");
         }
